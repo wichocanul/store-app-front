@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+.redirectText {
+  color: #2841c2;
+  cursor: pointer;
+}
+
+.redirectText:hover {
+  text-decoration: underline;
+}
+
+
+:root {
+  --color-primary: #ffc340;
+  --text-primary: #000000;
+  --hover-primary: #f7b629;
+}
