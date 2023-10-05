@@ -7,7 +7,7 @@
 }
 
 .authContainer {
-  width: 45%;
+  width: 50%;
   height: 100vh;
   display: flex;
   position: relative;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .contForm {
-  width: 70%;
+  width: 60%;
   height: 300px;
   padding: 10px;
 }
