@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  flagOptionsSettings: boolean = false;
+
+  showOptions() {
+    this.flagOptionsSettings = true;
+  }
+
+  hiddenOption() {
+    this.flagOptionsSettings = false;
+  }
+
+  text1() {
+    console.log('hola')
+  }
+
 }
