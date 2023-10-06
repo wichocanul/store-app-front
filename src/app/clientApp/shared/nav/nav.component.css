@@ -25,6 +25,16 @@ app-search {
   position: relative;
 }
 
+.login {
+  cursor: pointer;
+  color: #454545;
+  transition: .2s ease all;
+}
+
+.login:hover {
+  color: #000;
+}
+
 .profile {
   width: auto;
   height: 30px;
