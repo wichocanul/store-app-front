@@ -3,6 +3,11 @@
   src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +15,18 @@
   overflow-wrap: break-word;
   outline: 0;
   border: 0;
-  white-space: nowrap;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: font-title;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 .redirectText {

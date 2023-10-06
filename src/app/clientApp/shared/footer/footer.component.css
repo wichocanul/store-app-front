@@ -1,0 +1,17 @@
+footer {
+  width: 100%;
+  background: #2c2c2c;
+  color: #fff;
+  position: relative;
+  bottom: 0px;
+  padding: 20px 0 10px 0;
+}
+
+p {
+  margin-top: 10px;
+  font-size: .7rem;
+}
+
+.madeIn {
+  margin-top: 0px;
+}
