@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,15 +9,19 @@ import { Component } from '@angular/core';
 export class NavComponent {
   flagOptionsSettings: boolean = false;
 
+  constructor(
+    private router: Router,
+  ) {}
+
+  login() {
+    this.router.navigate(['/auth']);
+  }
+
   showOptions() {
     this.flagOptionsSettings = true;
   }
 
   hiddenOption() {
     this.flagOptionsSettings = false;
-  }
-
-  text1() {
-    console.log('hola');
   }
 }

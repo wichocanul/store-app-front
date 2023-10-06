@@ -11,6 +11,10 @@ nav {
   align-items: center;
 }
 
+.logo h3 {
+  cursor: pointer;
+}
+
 app-search {
   width: 100%;
 }
@@ -165,7 +169,9 @@ PHONE
 ============================================================ */
 @media screen and (max-width: 600px) {
   .logo {
-    display: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   .settings {
