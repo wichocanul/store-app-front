@@ -1,6 +1,22 @@
 .container {
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
+  margin-bottom: 10px;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction .showMore {
+  color: #4f4f4f;
+  cursor: pointer;
+  transition: .2s ease all;
+}
+
+.introduction .showMore:hover {
+  color: var(--color-primary);
 }
 
 h4 {

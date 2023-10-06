@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-section-products',
@@ -6,6 +6,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./section-products.component.css']
 })
 export class SectionProductsComponent {
+
+  @Input() title: string = '';
 
   @ViewChild('asContainerCards') containerCards!: ElementRef;
 
