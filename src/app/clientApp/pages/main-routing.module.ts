@@ -14,7 +14,7 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'category/:category',
+        path: 'search/:category',
         component: CategoryMainComponent,
       },
     ],

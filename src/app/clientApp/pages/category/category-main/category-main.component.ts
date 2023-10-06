@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CategoryMainComponent implements OnInit {
   category: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
