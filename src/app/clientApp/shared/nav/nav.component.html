@@ -1,4 +1,69 @@
+<!-- <div class="algo">
+  hola
+</div> -->
+
 <nav>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-sm-3">
+        <div class="logo">
+          <h3>Store App</h3>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 d-flex justify-content-center align-items-center">
+        <app-search></app-search>
+      </div>
+
+      <div class="col-12 col-sm-3">
+        <div class="settings">
+          <div class="profile"
+            (mouseenter)="showOptions()"
+            (mouseleave)="hiddenOption()"
+          >
+            <img src="assets/img/shared/userDefault.webp" alt="">
+            <p>Luis</p>
+
+            <div class="settingsOptions" *ngIf="flagOptionsSettings">
+              <p>Mi Perfil</p>
+              <p>Mis compras</p>
+              <p>Salir</p>
+            </div>
+          </div>
+
+          <div class="shoppingCart">
+            <img src="assets/img/shared/shopcart.svg" alt="shopping cart">
+            <span class="tooltip">Carrito de Compras</span>
+          </div>
+
+          <div class="favorites">
+            <img src="assets/img/shared/favorite.svg" alt="favorites">
+            <span class="tooltip">Favoritos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="categories">
+        <ul>
+          <li>Ofertas</li>
+          <li>Hogar</li>
+          <li>Juegos</li>
+          <li>Tecnologia</li>
+          <li>Moda</li>
+          <li>Juegos</li>
+          <li>Tecnologia</li>
+          <li>Moda</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <nav>
   <div class="container">
     <div class="row">
 
@@ -23,10 +88,13 @@
               <p>Salir</p>
             </div>
           </div>
+
           <div class="shoppingCart">
             <img src="assets/img/shared/shopcart.svg" alt="shopping cart">
             <span class="tooltip">Carrito de Compras</span>
           </div>
+
+
           <div
             class="favorites"
           >
@@ -50,6 +118,6 @@
       </div>
     </div>
   </div>
-</nav>
+</nav> -->
 
 

@@ -1,7 +1,14 @@
 nav {
   background: var(--color-primary);
   width: 100%;
-  padding: 5px 0;
+  padding: 5px 0 0 0;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 app-search {
@@ -9,11 +16,13 @@ app-search {
 }
 
 .settings {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-top: 5px;
+  position: relative;
 }
 
 .profile {
@@ -24,6 +33,7 @@ app-search {
   margin: 0;
   padding: 0;
   margin-top: 3px;
+  gap: 5px;
 }
 
 .profile img {
@@ -41,7 +51,7 @@ app-search {
   box-shadow: -2px 2px 5px #a0a0a0;
   border-radius: 5px;
   position: absolute;
-  top: 40px;
+  top: 38px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -66,6 +76,14 @@ app-search {
   display: inline-block;
 }
 
+.shoppingCart img {
+  width: 100%;
+}
+
+.favorites img {
+  width: 90%;
+}
+
 .favorites:hover .tooltip {
   opacity: 1;
   bottom: -35px;
@@ -80,12 +98,26 @@ app-search {
   transform: translateX(-50%);
 }
 
-.shoppingCart img {
-  width: 100%;
+.tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
 }
 
-.favorites img {
-  width: 90%;
+.categories {
+  overflow: auto;
+  margin-top: 5px;
 }
 
 .categories ul {
@@ -109,19 +141,43 @@ app-search {
   color: #000;
 }
 
-.tooltip {
-  position: absolute;
-  bottom: -35px;
-  left: 50%;
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  pointer-events: none;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 1;
+
+/* ============================================================
+TABLETS
+============================================================ */
+@media screen and (min-width: 601px) and (max-width: 912px) {
+
+}
+
+/* ============================================================
+PHONE
+============================================================ */
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .settings {
+    margin-top: 3px;
+    position: relative;
+  }
+
+  .settingsOptions {
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    box-shadow: -2px 2px 5px #a0a0a0;
+    border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .categories ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
