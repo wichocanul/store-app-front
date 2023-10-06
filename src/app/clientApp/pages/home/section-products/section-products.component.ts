@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-section-products',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-products.component.css']
 })
 export class SectionProductsComponent {
+
+  @ViewChild('asContainerCards') containerCards!: ElementRef;
+
+  moveLeft() {
+    let scrollElement = this.containerCards.nativeElement;
+    scrollElement.scrollLeft -= 260;
+  }
+
+  moveRight() {
+    let contenedorElement  = this.containerCards.nativeElement;
+    contenedorElement.scrollLeft += 260;
+  }
 
 }

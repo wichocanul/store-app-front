@@ -1,5 +1,6 @@
 .container {
   margin-top: 30px;
+  position: relative;
 }
 
 h4 {
@@ -8,12 +9,14 @@ h4 {
 
 .contSection {
   width: 100%;
-  background: rgb(39, 153, 125);
   display: flex;
   gap: 15px;
-  overflow: auto;
+  overflow-x: auto;
   padding: 5px;
   margin-bottom: 30px;
+  vertical-align: top;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
 }
 
 .contSection::-webkit-scrollbar {
@@ -21,12 +24,14 @@ h4 {
 }
 
 .target {
+  flex-direction: 0 0 auto;
   width: 245px;
   min-width: 245px;
   background: #fff;
   border-radius: 10px;
   box-shadow: -2px 2px 4px #a5a5a5;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .target .imgProduct {
@@ -73,4 +78,46 @@ h4 {
   color: #21c061;
   margin-top: 10px;
   text-align: center;
+}
+
+.btnRight {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff76;
+  line-height: 40px;
+  font-size: 1rem;
+  color: #00000082;
+  transition: .2s ease all;
+}
+
+.btnRight:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btnLeft {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff76;
+  line-height: 40px;
+  font-size: 1rem;
+  color: #00000082;
+  transition: .2s ease all;
+}
+
+.btnLeft:hover {
+  background: var(--color-primary);
+  color: #fff;
 }

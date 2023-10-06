@@ -2,8 +2,12 @@
   <div class="introduction">
     <h4>{{ 'Ofertas del dia' | uppercase }}</h4>
   </div>
-  <div class="contSection">
+  <div #asContainerCards class="contSection">
 
+    <button class="btnLeft" (click)="moveLeft()"><</button>
+    <button class="btnRight" (click)="moveRight()">></button>
+
+      <!-- TODO: Create new Component for cards -->
       <div class="target">
         <div class="imgProduct">
           <img src="assets/img/products/iphone.webp" alt="">
