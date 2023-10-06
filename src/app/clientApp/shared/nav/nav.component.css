@@ -48,13 +48,14 @@ app-search {
   width: auto;
   height: auto;
   background: #ffffff;
-  box-shadow: -2px 2px 5px #a0a0a0;
+  box-shadow: -1px 1px 3px #6d6d6d4b;
   border-radius: 5px;
   position: absolute;
   top: 38px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 99;
 }
 
 .settingsOptions p {
