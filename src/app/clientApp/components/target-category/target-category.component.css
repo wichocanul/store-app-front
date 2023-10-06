@@ -1,0 +1,155 @@
+.target {
+  flex-direction: 0 0 auto;
+  width: 245px;
+  min-width: 245px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: -2px 2px 4px #a5a5a5;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.target .imgProduct {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target .imgProduct img {
+  height: 100%;
+  max-width: 230px;
+}
+
+.dataProduct {
+  padding: 10px;
+}
+
+.dataProduct .title {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 50px;
+  overflow: hidden;
+  text-align: start;
+}
+
+.dataProduct p.underlined {
+  text-decoration: line-through;
+  color: #21c061;
+}
+
+.dataProduct h5 span {
+  font-size: .8rem;
+  color: #000;
+  width: auto;
+  background: #21c061;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.dataProduct .shipment {
+  color: #21c061;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* ============================================================
+TABLETS
+============================================================ */
+@media screen and (min-width: 601px) and (max-width: 912px) {
+  .contSection {
+    width: 100%;
+    display: flex;
+  }
+
+  .target {
+    width: 30%;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 2px 4px #a5a5a5;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .dataProduct {
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 0px;
+  }
+
+  .dataProduct .title {
+    margin-top: 10px;
+  }
+}
+
+/* ============================================================
+PHONE
+============================================================ */
+@media screen and (max-width: 600px) {
+  .contSection {
+    width: 100%;
+    display: flex;
+  }
+
+  .target {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .target .imgProduct {
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+  }
+
+  .target .imgProduct img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dataProduct {
+    width: 60%;
+  }
+
+  .dataProduct .title {
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    overflow: hidden;
+    text-align: start;
+    margin: 0;
+  }
+
+  .dataProduct p.underlined {
+    text-decoration: line-through;
+    color: #21c061;
+  }
+
+  .dataProduct h5 span {
+    font-size: .8rem;
+    color: #000;
+    width: auto;
+    background: #21c061;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
+
+  .dataProduct .shipment {
+    color: #21c061;
+    margin-top: 10px;
+    text-align: start;
+  }
+}
