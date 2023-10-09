@@ -3,12 +3,18 @@
     <div class="contForm">
       <h1>Login</h1>
 
-      <form class="formContainer">
+      <form
+        class="formContainer"
+        autocomplete="off"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+      >
         <div class="form-group">
           <input
             type="email"
             id="email"
             class="form-input md-light"
+            formControlName="email"
             placeholder=" "
           />
           <label for="email" class="form-label">Email:</label>
@@ -20,6 +26,7 @@
             type="password"
             id="password"
             class="form-input md-light"
+            formControlName="password"
             placeholder=" "
           />
           <label for="password" class="form-label">Contraseña:</label>
@@ -27,7 +34,7 @@
         </div>
 
         <div class="contBtn">
-          <button type="submit" class="btnAuth">Login</button>
+          <button type="submit" class="btnAuth" [disabled]="loginForm.invalid">Login</button>
         </div>
       </form>
 
