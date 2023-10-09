@@ -15,8 +15,8 @@
 
       <div class="col-12 col-sm-3">
         <div class="settings">
-          <p class="login" (click)="login()">Iniciar sesion</p>
-          <!-- <div class="profile"
+          <p *ngIf="!userActive" class="login" (click)="auth()">Iniciar sesion</p>
+          <div *ngIf="userActive" class="profile"
             (mouseenter)="showOptions()"
             (mouseleave)="hiddenOption()"
           >
@@ -26,9 +26,9 @@
             <div class="settingsOptions" *ngIf="flagOptionsSettings">
               <p>Mi Perfil</p>
               <p>Mis compras</p>
-              <p>Salir</p>
+              <p (click)="auth()">Salir</p>
             </div>
-          </div> -->
+          </div>
 
           <div class="shoppingCart">
             <img src="assets/img/shared/shopcart.svg" alt="shopping cart" />
@@ -46,11 +46,14 @@
     <div class="row">
       <div class="categories">
         <ul>
-          <li [routerLink]="['search', 'ofertas']">Ofertas</li>
+          <li [routerLink]="['search', 'todo']">Todo</li>
+          <li [routerLink]="['search', 'videojuegos']">Videojuegos</li>
           <li [routerLink]="['search', 'hogar']">Hogar</li>
-          <li [routerLink]="['search', 'juegos']">Juegos</li>
-          <li [routerLink]="['search', 'tecnologia']">Tecnologia</li>
-          <li [routerLink]="['search', 'moda']">Moda</li>
+          <li [routerLink]="['search', 'ropa']">Ropa</li>
+          <li [routerLink]="['search', 'electronicos']">Electronicos</li>
+          <li [routerLink]="['search', 'belleza-hihiene']">Belleza e Higiene</li>
+          <li [routerLink]="['search', 'mascotas']">Mascotas</li>
+          <li [routerLink]="['search', 'juguetes']">Juguetes</li>
         </ul>
       </div>
     </div>

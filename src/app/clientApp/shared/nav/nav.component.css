@@ -65,7 +65,7 @@ app-search {
   box-shadow: -1px 1px 3px #6d6d6d4b;
   border-radius: 5px;
   position: absolute;
-  top: 38px;
+  top: 33px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -150,6 +150,8 @@ app-search {
   padding: 3px 5px;
   color: #454545;
   transition: .2s ease all;
+  font-size: .9rem;
+  white-space: nowrap;
 }
 
 .categories ul li:hover {
@@ -196,5 +198,9 @@ PHONE
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+
+  .categories ul li {
+    font-size: .6rem;
   }
 }

@@ -8,24 +8,10 @@
     <button class="btnLeft" (click)="moveLeft()"><</button>
     <button class="btnRight" (click)="moveRight()">></button>
 
-      <!-- TODO: Create new Component for cards -->
-
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-      <app-target-scroll></app-target-scroll>
-
-      <!-- {
-        img: 'assets/img/products/iphone.webp',
-        title: 'Apple iPhone 13 (128 GB) - Azul - Distribuidor autorizado',
-        price: $20,999
-        priceOff: 26% OFF,
-        shipment: 'envio gratis'
-      } -->
+      <app-target-scroll
+        *ngFor="let product of productsSection"
+        [product]="product"
+      ></app-target-scroll>
 
   </div>
 </div>
