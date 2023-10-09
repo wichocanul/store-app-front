@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/authService/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,11 @@ export class LoginComponent {
           if(ok == 'success') {
             this.router.navigateByUrl('/store');
           } else {
-            // TODO: Add alert
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: ok,
+            })
           }
         }
       })
