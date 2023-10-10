@@ -24,7 +24,7 @@
             <p>{{ user }}</p>
 
             <div class="settingsOptions" *ngIf="flagOptionsSettings">
-              <p>Mi Perfil</p>
+              <p [routerLink]="['profile']">Mi Perfil</p>
               <p>Mis compras</p>
               <p (click)="auth()">Salir</p>
             </div>

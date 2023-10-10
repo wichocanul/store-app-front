@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="sectionUser">
+    <div class="contImg">
+      <img src="assets/img/shared/userDefault.webp" alt="">
+    </div>
+    <div class="userData">
+      <div class="contData">
+        <p><span>Name: </span> {{name}}</p>
+      </div>
+      <div class="contData">
+        <p><span>Email: </span> {{email}}</p>
+      </div>
+      <div class="contData">
+        <p><span>Tipo de usuario: </span> {{userType}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <button class="options" (click)="redirect('users-crud')">
+        CRUD Usuarios
+      </button>
+    </div>
+    <div class="col-12 col-md-6">
+      <button class="options">
+        CRUD Productos
+      </button>
+    </div>
+  </div>
+</div>
