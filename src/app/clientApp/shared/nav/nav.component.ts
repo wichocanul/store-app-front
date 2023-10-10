@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/authService/auth.service';
 export class NavComponent {
   flagOptionsSettings: boolean = false;
   userActive: boolean = false;
+  user: string = '';
 
   constructor(
     private router: Router,
@@ -18,6 +19,7 @@ export class NavComponent {
 
   ngOnInit() {
     this.userActive = this.authService.statusSesion();
+    localStorage.getItem('user') ? this.user = localStorage.getItem('user')! : this.user = '';
   }
 
   auth() {

@@ -30,7 +30,8 @@
 
 .dataProduct .title {
   width: 100%;
-  height: auto;
+  height: 50px;
+  max-height: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
   max-height: 50px;
@@ -40,7 +41,13 @@
 
 .dataProduct p.underlined {
   text-decoration: line-through;
+  height: 20px;
   color: #21c061;
+  line-height: 17px;
+}
+
+.disabled {
+  display: none;
 }
 
 .dataProduct h5 span {

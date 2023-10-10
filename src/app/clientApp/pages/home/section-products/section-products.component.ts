@@ -24,7 +24,7 @@ export class SectionProductsComponent implements OnInit {
   }
 
   getProducts() {
-    this.productsService.searchCategory(this.category).subscribe({
+    this.productsService.searchArticle(this.category).subscribe({
       next: (resp) => {
         this.productsSection = resp.data;
       },

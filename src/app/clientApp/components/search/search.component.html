@@ -1,6 +1,30 @@
-<div class="contInput">
-  <input type="text"  placeholder="Buscar productos"/>
-  <button>
-    <img src="assets/img/shared/search.svg" alt="">
-  </button>
+<div class="containerSearch">
+
+  <form
+    (ngSubmit)="search()"
+    autocomplete="off"
+  >
+    <div class="contInput">
+      <input
+        type="text"
+        placeholder="Buscar productos"
+        name="word"
+        [(ngModel)]="word"
+        (input)="pressKey()"
+        (keydown.enter)="redirect()"
+      />
+      <button type="submit">
+        <img (click)="redirect()" src="assets/img/shared/search.svg" alt="">
+      </button>
+    </div>
+  </form>
+
+
+  <div class="contSearch" *ngIf="word">
+    <div *ngFor="let wordFound of wordsFound">
+      <p (click)="assignWords(wordFound.name)">
+        {{ wordFound.name }}
+      </p>
+    </div>
+  </div>
 </div>

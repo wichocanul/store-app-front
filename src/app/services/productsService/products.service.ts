@@ -12,14 +12,10 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  searchCategory(category: string): Observable<ProductResponse> {
-
+  searchArticle(word: string): Observable<ProductResponse> {
     let url = ``;
-    category == 'todo' ? url = `${this.baseUrl}/products/search` : url = `${this.baseUrl}/products/search?category=${category}`;
+    word == 'todo' ? url = `${this.baseUrl}/products/search` : url = `${this.baseUrl}/products/search?search_term=${word}`;
 
-    const headers = new HttpHeaders()
-      .set('Authorization', sessionStorage.getItem('token') || '');
-
-    return this.http.get<ProductResponse>( url, { headers });
+    return this.http.get<ProductResponse>( url );
   }
 }

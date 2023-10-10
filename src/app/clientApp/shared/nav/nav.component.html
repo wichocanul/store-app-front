@@ -21,7 +21,7 @@
             (mouseleave)="hiddenOption()"
           >
             <img src="assets/img/shared/userDefault.webp" alt="">
-            <p>Luis</p>
+            <p>{{ user }}</p>
 
             <div class="settingsOptions" *ngIf="flagOptionsSettings">
               <p>Mi Perfil</p>
@@ -51,7 +51,7 @@
           <li [routerLink]="['search', 'hogar']">Hogar</li>
           <li [routerLink]="['search', 'ropa']">Ropa</li>
           <li [routerLink]="['search', 'electronicos']">Electronicos</li>
-          <li [routerLink]="['search', 'belleza-hihiene']">Belleza e Higiene</li>
+          <li [routerLink]="['search', 'Belleza e Higiene']">Belleza e Higiene</li>
           <li [routerLink]="['search', 'mascotas']">Mascotas</li>
           <li [routerLink]="['search', 'juguetes']">Juguetes</li>
         </ul>

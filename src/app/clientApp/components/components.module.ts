@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { TargetScrollComponent } from './target-scroll/target-scroll.component';
 import { TargetCategoryComponent } from './target-category/target-category.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +15,9 @@ import { TargetCategoryComponent } from './target-category/target-category.compo
     TargetCategoryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule
   ],
   exports: [
     SearchComponent,
