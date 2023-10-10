@@ -5,6 +5,9 @@ import { MainStoreComponent } from './main-store/main-store.component';
 import { CategoryMainComponent } from './category/category-main/category-main.component';
 import { ProfileMainComponent } from './profile/profile-main/profile-main.component';
 import { UserMainComponent } from './users-crud/user-main/user-main.component';
+import { loginGuard } from 'src/app/guards/auth.guard';
+import { ProductsMainComponent } from './products-crud/products-main/products-main.component';
+import { adminGuard } from 'src/app/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -22,11 +25,22 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileMainComponent,
+        canActivate: [loginGuard]
       },
       {
         path: 'users-crud',
         component: UserMainComponent,
+        canActivate: [loginGuard, adminGuard]
       },
+      {
+        path: 'products-crud',
+        component: ProductsMainComponent,
+        canActivate: [loginGuard, adminGuard]
+      },
+      {
+        path: '**',
+        redirectTo: ''
+      }
     ],
   },
 ];

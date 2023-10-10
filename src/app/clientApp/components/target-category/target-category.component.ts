@@ -13,6 +13,7 @@ export class TargetCategoryComponent {
   finalPrice: string = '';
   statusPriceOff: boolean = false;
   shipmentStatus: string = '';
+  image: string = '';
 
   @Input() product: ProductData = {
     id: 0,
@@ -46,6 +47,7 @@ export class TargetCategoryComponent {
     }
     parseFloat(this.finalPrice) > 300 ? this.shipmentStatus = 'envio gratis' : this.shipmentStatus = 'mas 99 envio'
     this.title = this.product.name;
+    this.image = this.product.image[0];
   }
 
 }

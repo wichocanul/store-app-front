@@ -8,9 +8,15 @@ export interface ProductData {
   image: string[];
   sku: string;
   category_id: string;
+  category?: string;
 }
 
 export interface ProductResponse {
   message: string;
   data: ProductData[];
+}
+
+export interface RemoveProduct {
+  message: string;
+  details: string;
 }

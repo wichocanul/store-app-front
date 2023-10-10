@@ -16,14 +16,14 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" *ngIf="userType == 'admin'">
     <div class="col-12 col-md-6">
       <button class="options" (click)="redirect('users-crud')">
         CRUD Usuarios
       </button>
     </div>
     <div class="col-12 col-md-6">
-      <button class="options">
+      <button class="options" (click)="redirect('products-crud')">
         CRUD Productos
       </button>
     </div>

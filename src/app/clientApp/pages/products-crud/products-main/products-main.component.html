@@ -1,0 +1,45 @@
+<div class="container">
+  <h3>Productos</h3>
+  <div class="cont-table">
+    <table>
+      <tr class="tr-title">
+        <th class="cell-init">id</th>
+        <th class="cell-init">nombre</th>
+        <th class="cell-init">descripcion</th>
+        <th class="cell-init">precio</th>
+        <th class="cell-init">descuento</th>
+        <th class="cell-init">stock</th>
+        <th class="cell-init">sku</th>
+        <th class="cell-init">category</th>
+        <th class="cell-init">editar</th>
+        <th class="cell-init">eliminar</th>
+      </tr>
+
+      <tr class="tr-data" *ngFor="let product of products">
+        <td class="cell-data">{{ product.id }}</td>
+        <td class="cell-data">{{ product.name }}</td>
+        <td class="cell-data">{{ product.description }}</td>
+        <td class="cell-data">{{ product.price }}</td>
+        <td class="cell-data">{{ product.priceOff }}</td>
+        <td class="cell-data">{{ product.stock }}</td>
+        <td class="cell-data">{{ product.sku }}</td>
+        <td class="cell-data">{{ product.category }}</td>
+        <td class="cell-data">
+          <button
+            class="edit"
+            (click)="editProduct(product)"
+          >
+            Editar
+          </button></td>
+        <td class="cell-data">
+          <button
+            class="remove"
+            (click)="alertRemove(product)"
+          >
+            Eliminar
+          </button></td>
+      </tr>
+    </table>
+  </div>
+
+</div>

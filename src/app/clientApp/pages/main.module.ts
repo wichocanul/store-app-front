@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { CategoryModule } from './category/category.module';
 import { ProfileModule } from './profile/profile.module';
 import { UsersCrudModule } from './users-crud/users-crud.module';
+import { ProductsCrudModule } from './products-crud/products-crud.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { UsersCrudModule } from './users-crud/users-crud.module';
     CategoryModule,
     HomeModule,
     ProfileModule,
-    UsersCrudModule
+    UsersCrudModule,
+    ProductsCrudModule
   ]
 })
 export class MainModule { }
